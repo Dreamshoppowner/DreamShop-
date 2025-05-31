@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DreamShop</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <canvas id="stars"></canvas>
+  <div class="container">
+    <h1>DreamShop</h1>
+    <div class="products">
+      <div class="product">
+        <img src="product1.jpg" alt="Product 1"/>
+        <h2>Wireless Earbuds</h2>
+        <p>$29.99</p>
+        <button onclick="selectProduct('Wireless Earbuds', '29.99')">Order</button>
+      </div>
+      <div class="product">
+        <img src="product2.jpg" alt="Product 2"/>
+        <h2>Smartwatch</h2>
+        <p>$49.99</p>
+        <button onclick="selectProduct('Smartwatch', '49.99')">Order</button>
+      </div>
+      <div class="product">
+        <img src="product3.jpg" alt="Product 3"/>
+        <h2>Bluetooth Speaker</h2>
+        <p>$39.99</p>
+        <button onclick="selectProduct('Bluetooth Speaker', '39.99')">Order</button>
+      </div>
+      <div class="product">
+        <img src="product4.jpg" alt="Product 4"/>
+        <h2>LED Ring Light</h2>
+        <p>$19.99</p>
+        <button onclick="selectProduct('LED Ring Light', '19.99')">Order</button>
+      </div>
+    </div>
+
+    <form id="order-form">
+      <h3>Order Form</h3>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="phone" placeholder="Phone Number" required>
+      <input type="text" name="address" placeholder="Shipping Address" required>
+      <input type="text" name="product" id="product" readonly>
+      <input type="hidden" name="price" id="price">
+      <textarea name="message" placeholder="Message (optional)"></textarea>
+      <button type="submit">Submit Order</button>
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
